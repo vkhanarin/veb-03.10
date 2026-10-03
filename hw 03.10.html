@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет Вакансий</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: #f2f3f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .space-between {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .header {
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .btn-blue {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .promo-banner {
+            background-color: #e4dedfa4;
+            border-radius: 5px;
+            padding: 60px 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .promo-banner2 {
+            background-color: #e4dedfa4;
+            border-radius: 5px;
+            padding: 60px 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 25px;
+        }
+
+        .promo-banner h1 {
+            margin-top: 5;
+            font-size: 36px;
+        }
+
+        .btn-dark {
+            background-color: #202124;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+        }
+
+
+        .main-content {
+            align-items: flex-start;
+        }
+
+
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            background-color: transparent;
+            margin-right: 30px;
+        }
+
+        .filter-group {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .filter-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .filter-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .cards-grid {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .card-company {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-location {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .card-details {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .badge-new {
+            transform: skew(20deg, 10deg);
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 10px;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div class="header flex-row space-between">
+            <div class="logo">mattee</div>
+            <div class="nav-links">
+                <a href="#">Вакансии</a>
+                <a href="#">Работодателям</a>
+            </div>
+            <button class="btn-blue">Опубликовать</button>
+        </div>
+
+
+        <div class="promo-banner">
+            <h1>Больше вакансий в Телеграм-канале</h1>
+            <a href="#" class="btn-dark">Перейти в ТГ канал</a>
+        </div>
+
+
+        <div class="main-content flex-row">
+
+
+            <div class="sidebar flex-col">
+
+                <div class="filter-group">
+                    <input type="text" class="search-box" placeholder="Поиск">
+                    <div class="filter-title">Формат</div>
+                    <div class="filter-item">Парт-тайм</div>
+                    <div class="filter-item">Фулл-тайм</div>
+                    <div class="filter-item">Стажировка</div>
+
+                    <div class="filter-title">Локация</div>
+                    <div class="filter-item">Москва</div>
+                    <div class="filter-item">Санкт-Петербург</div>
+                    <div class="filter-item">Казань</div>
+                </div>
+            </div>
+
+
+            <div class="cards-grid">
+
+
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="badge-new">новая</div>
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="badge-new">новая</div>
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="badge-new">новая</div>
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flex-col">
+                        <div class="card-company">Т-Банк</div>
+                        <div class="card-title">Художник концепт-арта</div>
+                        <div class="card-location">📍 Москва, формат работы</div>
+                        <div class="flex-row">
+                            <div class="card-details">280 000₽</div>
+                            <div class="card-details">Фулл-тайм</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="promo-banner2">
+            <p>jnhgbnueshgnsugerh</p>
+            <p>jnhgbnueshgnsugerh</p>
+            <p>jnhgbnueshgnsugerh</p>
+            <h1>WWWWWWW</h1>
+
+        </div>
+
+</body>
+</html>
